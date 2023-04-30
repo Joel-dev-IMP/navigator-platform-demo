@@ -21,7 +21,7 @@
             Deutscher Philologie, die Anglistik sowieso).</p>
     </div>
     <div style="display: none;" id="other-content">
-        <p>Sie benutzen <b>nicht</b> Windows. Deswegen hier ein Ausschnitt aus dem Wikipedia-Artikel zu Politik:</p>
+        <p>Sie benutzen <b>nicht</b> Windows (<span id="platform"></span>). Deswegen hier ein Ausschnitt aus dem Wikipedia-Artikel zu Politik:</p>
         <p>Politik bezeichnet die Strukturen (Polity), Prozesse (Politics) und Inhalte (Policy) zur Regelung der
             Angelegenheiten eines Gemeinwesens – etwa eines Staates oder einer Verwaltungseinheit – durch verbindliche
             und auf Macht beruhende Entscheidungen. </p>
@@ -34,6 +34,7 @@
     </div>
     <script defer>
         console.log(navigator.platform);
+        document.getElementById("platform").innerText = navigator.platform
 
         if (navigator.platform == 'Win32') {
             document.getElementById("windows-content").removeAttribute("style")
