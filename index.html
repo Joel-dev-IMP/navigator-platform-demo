@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-Seite</title>
+</head>
+
+<body>
+    <div style="display: none;" id="windows-content">
+        <p>Sie benutzen Windows. Deswegen hier ein Ausschnitt aus dem Wikipedia-Artikel zu Germanistik:</p>
+        <p>Germanistik ist die akademische Disziplin der Geisteswissenschaften, welche die deutsche Sprache und
+            deutschsprachige Literatur in ihren historischen und gegenwärtigen Formen erforscht, dokumentiert und
+            vermittelt.</p>
+        <p>Meist wird Germanistik synonym mit der Fachbezeichnung Deutsche Philologie oder Deutsche Sprach- und
+            Literaturwissenschaft verwendet. In einer weiter gefassten (aber selteneren) Bedeutung des Wortes bezieht
+            sich Germanistik auf die germanischen Sprachen, Kulturen und Literaturen insgesamt (sonst bilden aber
+            Skandinavistik, Niederlandistik, Frisistik und Jiddistik separate Fächer neben der Germanistik i. S. v.
+            Deutscher Philologie, die Anglistik sowieso).</p>
+    </div>
+    <div style="display: none;" id="other-content">
+        <p>Sie benutzen <b>nicht</b> Windows. Deswegen hier ein Ausschnitt aus dem Wikipedia-Artikel zu Politik:</p>
+        <p>Politik bezeichnet die Strukturen (Polity), Prozesse (Politics) und Inhalte (Policy) zur Regelung der
+            Angelegenheiten eines Gemeinwesens – etwa eines Staates oder einer Verwaltungseinheit – durch verbindliche
+            und auf Macht beruhende Entscheidungen. </p>
+        <p>Politik regelt dabei insbesondere das öffentliche, aber teilweise auch das private (Zusammen-)Leben der
+            Bürger, die Handlungen und Bestrebungen zur Führung des Gemeinwesens nach innen und außen sowie die
+            Willensbildung und Entscheidungsfindung über Angelegenheiten des Gemeinwesens. Abstrakt formuliert wird in
+            der Politikwissenschaft auch von der "Verteilung von Werten (materiellen wie Geld oder nicht-materiellen wie
+            Demokratie)" gesprochen.</p>
+
+    </div>
+    <script defer>
+        console.log(navigator.platform);
+
+        if (navigator.platform == 'Win32') {
+            document.getElementById("windows-content").removeAttribute("style")
+        } else {
+            document.getElementById("other-content").removeAttribute("style")
+        }
+    </script>
+</body>
+
+</html>
